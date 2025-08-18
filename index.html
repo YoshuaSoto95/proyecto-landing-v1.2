@@ -44,7 +44,7 @@
     <!-- AUTOR -->
     <section class="autor fade-in">
         <div class="autor-card">
-            <img src="img/speaker.jpg" alt="Instructor">
+            <img src="img/speaker.png" alt="Instructor">
             <div>
                 <h3>Kirill Ivanov</h3>
                 <p>Capital > 10M$ | Speaker principal</p>
@@ -57,6 +57,43 @@
     <section class="footer">
         <p>© 2025 CryptoMind. Todos los derechos reservados.</p>
     </section>
+
+    <!-- MODAL REGISTRO -->
+    <div class="modal" id="modalRegistro">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Registro al Programa</h2>
+        <form id="registroForm">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="movil">Móvil</label>
+            <input type="tel" id="movil" name="movil" required>
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+        <button type="submit" class="btn-send">Enviar</button>
+        </form>
+    </div>
+    </div>
+
+    <!-- THANK YOU PAGE -->
+    <div class="thankyou" id="thankyouPage">
+        <div class="thankyou-content">
+            <h2>🎉 ¡Gracias por registrarte!</h2>
+            <p>Te hemos enviado un correo con los siguientes pasos.</p>
+            <a href="#" id="backHome" class="btn-back">Volver</a>
+        </div>
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>

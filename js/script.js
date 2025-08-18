@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Botón de compra
-    const buyBtn = document.getElementById("buyBtn");
-    if (buyBtn) {
-        buyBtn.addEventListener("click", () => {
-            alert("¡Gracias por tu interés! Serás redirigido al pago.");
-        });
-    }
-
     // Contadores animados
     const counters = document.querySelectorAll(".metrics h3");
     const options = { threshold: 0.5 };
@@ -37,4 +29,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }, options);
 
     counters.forEach(counter => observer.observe(counter));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buyBtn = document.getElementById("buyBtn");
+  const modal = document.getElementById("modalRegistro");
+  const closeModal = document.getElementById("closeModal");
+  const form = document.getElementById("registroForm");
+  const thankyouPage = document.getElementById("thankyouPage");
+  const backHome = document.getElementById("backHome");
+
+  // Abrir modal
+  if (buyBtn) {
+    buyBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+    });
+  }
+
+  // Cerrar modal
+  if (closeModal) {
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+
+  // Enviar formulario
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      modal.style.display = "none";
+      thankyouPage.style.display = "flex";
+    });
+  }
+
+  // Volver a Home
+  if (backHome) {
+    backHome.addEventListener("click", (e) => {
+      e.preventDefault();
+      thankyouPage.style.display = "none";
+    });
+  }
 });
