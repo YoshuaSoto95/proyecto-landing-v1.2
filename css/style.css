@@ -1,24 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 /* ==== GLOBALES ==== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: "Roboto Mono", monospace;
-    background: linear-gradient(270deg, #0d0d0d, #420633, #0d0d0d, #1a0033);
-    background-size: 600% 600%;
+    background: 
+        linear-gradient(270deg, rgba(13,13,13,0.6), rgba(66,6,51,0.6), rgba(13,13,13,0.6), rgba(26,0,51,0.6)),
+        url('../img/background.png') no-repeat center center fixed;
+    background-size: 600% 600%, cover;
     animation: gradientMove 20s ease infinite;
     color: #fff;
     overflow-x: hidden;
 }
 
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%, center; }
+    50% { background-position: 100% 50%, center; }
+    100% { background-position: 0% 50%, center; }
 }
 
 /* ==== HEADER ==== */
