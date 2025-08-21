@@ -1,0 +1,52 @@
+/* ==== Responsive Styles ==== */
+
+/* Mobile */
+@media (max-width: 978px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .container .hero-content{
+        max-width: 100%;
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .container .hero-picture {
+        width: 100%;
+        padding: 0 2rem;
+        margin-top: 2rem;
+    }
+
+    header .nav {
+        display: none;
+    }
+
+    header .menu-toggle{
+        display: block;
+        font-size: 1.5rem;
+        color: var(--color-text);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 458px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content .btn-cta {
+        font-size: 1.2rem;
+        padding: 1rem 3rem;
+    }
+    
+}
