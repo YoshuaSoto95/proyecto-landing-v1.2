@@ -50,3 +50,44 @@
     }
     
 }
+
+@media (max-width: 398px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    header .logo .logo-text{
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 0.5rem;
+    }
+
+    .hero-content {
+        padding: 4rem 0.2rem;
+    }
+
+    .hero-content .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-content .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-content .hero-text {
+        font-size: 0.9rem;
+    }
+
+    .hero-content .btn-cta {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+    
+}
