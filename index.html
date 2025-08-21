@@ -4,90 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing CyberCard v1.2</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- HERO -->
+    <div class="neon"></div>
     <section class="hero" id="hero">
-        <header class="header">
-            <div class="logo"><h2>CryptoMind</h2></div>
-            <nav class="menu">
+        <header>
+            <div class="logo">
+                <h2 class="logo-text">CyberAcademy</h2>
+            </div>
+            <nav class="nav">
                 <a href="#programa">Programa</a>
                 <a href="#beneficios">Beneficios</a>
                 <a href="#contacto">Contacto</a>
+                <a href="#registro" class="btn-register">Registrarme</a>
             </nav>
-            <div class="cta-action">
-                <a href="#registro" class="btn-small">Registrarme</a>
-            </div>
         </header>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="fade-in">Aprende Criptomonedas desde cero</h1>
-                <p class="fade-in delay-1">Domina el mundo cripto en solo 1 mes. Explicamos lo difícil con palabras simples y pasos claros.</p>
-                <div class="metrics fade-in delay-2">
-                    <div><h3 data-target="30">0</h3><p>Lecciones</p></div>
-                    <div><h3 data-target="24">0</h3><p>Soporte</p></div>
-                    <div><h3 data-target="5">0</h3><p>Casos reales</p></div>
-                    <div><h3 data-target="20">0</h3><p>Material extra</p></div>
-                </div>
-                <a href="#registro" class="btn-main fade-in delay-3" id="buyBtn">Inscribirme ahora</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Bienvenido a CyberAcademy</h1>
+                <h2 class="hero-subtitle">El futuro de la educación digital esta un click de distancia, unete a nosotros.</h2>
+                <p class="hero-text">La mejor plataforma de aprendizaje online, para mejorar tus habilidades digitales, registrate ahora, es gratis!</p>
+                <a href="#registro" class="btn-cta">Regístrate Ahora</a>
             </div>
-            <div class="hero-image fade-in delay-2">
-                <img src="img/cyberpunk.png" alt="Cyberpunk Girl">
+            <div class="hero-picture">
+                <img src="img/bitcoin.png" alt="Imagen de bitcoin" class="hero-img">
             </div>
         </div>
     </section>
-    <!-- AUTOR -->
-    <section class="autor fade-in">
-        <div class="autor-card">
-            <img src="img/speaker.png" alt="Instructor">
-            <div>
-                <h3>Kirill Ivanov</h3>
-                <p>Capital > 10M$ | Speaker principal</p>
-            </div>
-        </div>
-        <p class="students"><i class="fa-solid fa-users"></i> 10,000+ estudiantes satisfechos</p>
-    </section>
-    <!-- FOOTER -->
-    <section class="footer">
-        <p>© 2025 CryptoMind. Todos los derechos reservados.</p>
-    </section>
-    <!-- MODAL REGISTRO -->
-    <div class="modal" id="modalRegistro">
-    <div class="modal-content">
-        <span class="close-btn" id="closeModal">&times;</span>
-        <h2>Registro al Programa</h2>
-        <form id="registroForm">
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="form-group">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" required>
-        </div>
-        <div class="form-group">
-            <label for="movil">Móvil</label>
-            <input type="tel" id="movil" name="movil" required>
-        </div>
-        <div class="form-group">
-            <label for="correo">Correo</label>
-            <input type="email" id="correo" name="correo" required>
-        </div>
-        <button type="submit" class="btn-send">Enviar</button>
-        </form>
-    </div>
-    </div>
-    <!-- THANK YOU PAGE -->
-    <div class="thankyou" id="thankyouPage">
-        <div class="thankyou-content">
-            <h2>🎉 ¡Gracias por registrarte!</h2>
-            <p>Te hemos enviado un correo con los siguientes pasos.</p>
-            <a href="#" id="backHome" class="btn-back">Volver</a>
-        </div>
-    </div>
-    <script src="js/script.js"></script>
 </body>
 </html>
