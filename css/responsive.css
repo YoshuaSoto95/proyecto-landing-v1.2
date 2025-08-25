@@ -2,18 +2,14 @@
 
 /* Mobile */
 @media (max-width: 978px) {
-    .hero {
-        height: 100vh;
-    }
-
     .container {
         flex-direction: column;
         padding: 0 1rem;
     }
 
-    .container .hero-content{
+    .container .hero-content {
         max-width: 100%;
-        padding: 6rem 2rem;
+        padding: 14rem 2rem;
         text-align: center;
     }
 
@@ -27,7 +23,7 @@
         display: none;
     }
 
-    header .menu-toggle{
+    header .menu-toggle {
         display: block;
         font-size: 1.5rem;
         color: var(--color-text);
@@ -48,7 +44,7 @@
         font-size: 1.2rem;
         padding: 1rem 3rem;
     }
-    
+
 }
 
 @media (max-width: 398px) {
@@ -56,12 +52,8 @@
         padding: 1rem 2rem;
     }
 
-    header .logo .logo-text{
+    header .logo .logo-text {
         font-size: 1.5rem;
-    }
-
-    .hero {
-        height: auto;
     }
 
     .container {
@@ -89,5 +81,5 @@
         font-size: 1rem;
         padding: 0.8rem 2rem;
     }
-    
+
 }
