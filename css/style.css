@@ -19,38 +19,30 @@
     --bg-color: #050022;
     --border-color: #010016;
 
-    --glass-color : #6b6b6b15;
+    --glass-color: #6b6b6b15;
 }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--color-text);
-    line-height: 1.6;
+.hero {
+    position: relative;
+    height: 100vh;
+    /* Ajusta la altura de la sección, vh significa viewport height */
     width: 100%;
+    overflow: hidden;
+    /* Evita que el video se salga de los límites */
+    display: flex;
+    flex-direction: column;
 }
 
-.neon-bg {
-  position: fixed;
-  inset: 0; /* ocupa todo el viewport */
-  z-index: -1; /* lo pone detrás de todo el contenido */
-  background: radial-gradient(circle at 20% 30%, rgba(255,0,80,0.4), transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(0,0,255,0.4), transparent 50%),
-              radial-gradient(circle at 50% 80%, rgba(150,0,255,0.4), transparent 50%);
-  filter: blur(80px);
-  animation: moveLights 15s ease-in-out infinite alternate;
-  background-size: 200% 200%;
-}
-
-@keyframes moveLights {
-  0% {
-    background-position: 0% 0%, 100% 0%, 50% 100%;
-  }
-  50% {
-    background-position: 100% 100%, 0% 100%, 50% 0%;
-  }
-  100% {
-    background-position: 50% 50%, 100% 50%, 0% 0%;
-  }
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Esto es clave para que el video se ajuste y cubra toda la sección sin distorsionarse. */
+    z-index: -1;
+    /* Envía el video al fondo, detrás del contenido */
 }
 
 /* ==== Styles ==== */
@@ -64,7 +56,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
 
     backdrop-filter: blur(75px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.781);
@@ -79,13 +71,13 @@ header .logo {
 }
 
 header .logo:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                 0 0 20px rgba(255, 255, 255, 0.3), 
-                 0 0 30px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
 
-header .nav{
+header .nav {
     display: flex;
     gap: 2rem;
     display: flex;
@@ -107,7 +99,7 @@ header .nav a:hover {
 }
 
 header .nav .btn-register {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 5px;
     border: 1px solid transparent;
     background-color: var(--secondary-color);
@@ -123,12 +115,12 @@ header .nav .btn-register:hover {
     transform: scale(1.1);
 }
 
-header .menu-toggle{
+header .menu-toggle {
     display: none;
 }
 
 /* ==== Container Hero ==== */
-.container {    
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,7 +128,7 @@ header .menu-toggle{
     height: 100%;
     text-align: center;
     padding: 0 2rem;
-}   
+}
 
 .hero-content {
     text-align: left;
@@ -147,9 +139,9 @@ header .menu-toggle{
 
 .hero-content .hero-title {
     font-size: 2.8rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                 0 0 20px rgba(255, 255, 255, 0.3), 
-                 0 0 30px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.2);
     font-weight: 700;
     color: var(--color-text);
     margin-bottom: 0.2rem;
@@ -158,9 +150,9 @@ header .menu-toggle{
 .hero-content .hero-subtitle {
     font-size: 1.5rem;
     font-weight: 500;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                 0 0 20px rgba(255, 255, 255, 0.3), 
-                 0 0 30px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.2);
     color: var(--color-text);
     margin-bottom: 0.5rem;
 }
@@ -168,9 +160,9 @@ header .menu-toggle{
 .hero-content .hero-text {
     color: var(--color-text);
     font-size: 1.1rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                 0 0 20px rgba(255, 255, 255, 0.3), 
-                 0 0 30px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.2);
     margin-bottom: 2rem;
 }
 
@@ -192,34 +184,25 @@ header .menu-toggle{
 }
 
 @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero-content .btn-cta:hover {
     background: var(--light-color);
     color: var(--color-text);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                0 0 20px rgba(255, 255, 255, 0.3), 
-                0 0 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.2);
     transition: all 0.6s ease;
     transform: scale(1.1);
-}
-
-.container .hero-picture{
-    width: 50%;
-}
-
-.container .hero-picture img {
-    width: 100%;
-    height: auto;
-    max-width: 800px;
-    filter: drop-shadow(0 10px 20px rgba(68, 82, 202, 0.815));
-    animation: floting 4s ease-in-out infinite alternate;
-}
-
-@keyframes floting {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-25px); }
 }
