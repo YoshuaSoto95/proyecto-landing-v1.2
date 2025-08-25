@@ -167,7 +167,8 @@ header .menu-toggle {
 }
 
 .hero-content .btn-cta,
-.btn-register {
+.btn-register,
+.btn-cta-big {
     padding: 0.7rem 4rem;
     border-radius: 5px;
     color: var(--color-text);
@@ -205,4 +206,47 @@ header .menu-toggle {
         0 0 30px rgba(255, 255, 255, 0.2);
     transition: all 0.6s ease;
     transform: scale(1.1);
+}
+
+/* ==== Program Styles ==== */
+.program {
+    padding: 6rem 2rem;
+    text-align: center;
+    color: var(--color-text);
+    background-color: var(--bg-color);
+}
+
+.program .boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.program .boxes .box {
+    background-color: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 280px;
+    width: 300px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.program .boxes .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.program .cta-btn {
+    margin-top: 3rem;
+    padding: 0.7rem 4rem;
+    border-radius: 5px;
 }
